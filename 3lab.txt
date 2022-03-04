@@ -11,16 +11,16 @@ int main ()
   setlocale (LC_ALL, "Rus");
   float x = 0.0, sum = 0.0, k1 = 1.0, k2 = 1.0, G = 0.0;
   
-    printf("\nЛаба_3");
-	printf("\nВариант 9");
-	printf("\nПИ.1-21-1");
-	printf("\nПерминова Нат\n");
+    printf("\nLaba_3");
+	printf("\nVar_9");
+	printf("\nPI.1-21-1");
+	printf("\nPerminova_Nat\n");
 	
-  printf ("\nВведите x\n");
+  printf ("\nenter x\n");
   scanf ("%f", &x);
   if (x > 1.0 || x < -1.0)
     {
-      printf ("Неправильное значение x (%f > |1|\n\n\n", x);
+      printf ("Wrong x (%f > |1|\n\n\n", x);
       return (0);
     }
   for (int n = 1; n <= 10; n++)
