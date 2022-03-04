@@ -1,0 +1,35 @@
+#define _CRT_SECURE_NO_WARNINGS
+#define _USE_MATH_DEFINES
+#include <conio.h>
+#include <math.h>
+#include <stdio.h>
+#include <locale.h>
+# define M_PI		3.14159265358979323846
+
+int main ()
+{
+  setlocale (LC_ALL, "Rus");
+  float x = 0.0, sum = 0.0, k1 = 1.0, k2 = 1.0, G = 0.0;
+  
+    printf("\nЛаба_3");
+	printf("\nВариант 9");
+	printf("\nПИ.1-21-1");
+	printf("\nПерминова Нат\n");
+	
+  printf ("\nВведите x\n");
+  scanf ("%f", &x);
+  if (x > 1.0 || x < -1.0)
+    {
+      printf ("Неправильное значение x (%f > |1|\n\n\n", x);
+      return (0);
+    }
+  for (int n = 1; n <= 10; n++)
+    {
+      k1 = k1 * (2.0 * n - 1.0);
+      k2 = k2 * (2.0 * n);
+      G = G + (k1 * pow (x, 2.0 * n + 1.0)) / (k2 * (2.0 * n + 1.0));
+      sum = M_PI / 2.0 - (x + G);
+      printf ("s = %0.20f\n", sum);
+    }
+  printf ("f(x) = arccos(x) = %0.20f\n\n\n", acos (x));
+}
